@@ -1,0 +1,41 @@
+
+        <div class="col-md-4 offset-md-5" >
+            <img class="profile-img" src=""/>
+        </div>
+    
+        <div class="col-md-10 offset-md-1">
+            <hr>
+        </div>
+   
+
+
+<form>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="identifiant">Identifiant</label>
+            <input type="text" class="form-control"  id="identifiant" value="{{identifiant}}" readonly>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="firstName">Nom</label>
+            <input type="text" class="form-control" id="firstName" value="{{nom}}" readonly>
+        </div>
+    </div>
+
+    <div class="form-row">
+
+        <div class="form-group col-md-6">
+            <label for="lastName">Prénom</label>
+            <input type="text" class="form-control" id="lastName" value="{{prenom}}" readonly>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="birthday">Date de naissance</label>
+            <input type="date" class="form-control"  value="{{date_de_naissance}}" readonly>
+        </div>
+    </div>
+
+    <div class="form-group col-md-6" ng-hide="visitor">
+        <label for="picture">Photo de profile</label>
+        <input type="text" class="form-control" id="picture" >
+    </div>
+   
+</form>

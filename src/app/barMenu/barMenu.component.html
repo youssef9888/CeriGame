@@ -1,0 +1,25 @@
+<nav class="navbar navbar-inverse"  *ngIf="isLoged">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" *ngIf="isLoged">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" >QuizGame</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active" routerLinkActive="active" *ngIf="isLoged"><a routerLink="home">Home</a></li>
+        <li class="active" routerLinkActive="active"  *ngIf="isLoged"><a routerLink="profil">Profil</a></li>
+        <li class="active" routerLinkActive="active" *ngIf="!isLoged" ><a routerLink="login">Login</a></li>
+         <li class="active" routerLinkActive="active" *ngIf="isLoged"  (click)=" getHistoryByUserThemes() "><a routerLink="historique">historique</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li *ngIf="isLoged"><a (click)="signOut()">Logout</a></li>
+        <li *ngIf="isLoged"  class="nav-link" ><a>{{date}} {{heure}}</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+

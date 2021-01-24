@@ -1,0 +1,22 @@
+
+  <button type="button"  (click)=" getHistoryByUserThemes()" class="btn btn-dark"> Show historique</button>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre de réponses</th>
+            <th>Score</th>
+            <th>Temps</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor=" let hist of hist">
+            <td>{{ hist.nb_reponses_corr}}</td>
+            <td>{{ hist.score }}</td>
+            <td>{{ hist.temps }}</td>
+            <td>{{ hist.date_jeu}}</td>
+        </tr>
+    </tbody>
+</table>
